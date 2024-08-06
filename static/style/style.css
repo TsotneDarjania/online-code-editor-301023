@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  position: absolute;
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  top: 30px;
+
+  color: red;
+
+  width: fit-content;
+}
+
+.users-number {
+  position: absolute;
+
+  left: 20px;
+  top: 20px;
+
+  color: green;
+  font-size: 18px;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+#cursor {
+  position: absolute;
+
+  transform: scale(0.6);
+
+  display: none;
+
+  animation-name: blink;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+
+  filter: grayscale(100%);
+}
+
+#screen {
+  width: 80vw;
+  height: 70vh;
+
+  background-color: black;
+  color: white;
+
+  font-size: 18px;
+  font-family: monospace;
+}
+
+#editor-input {
+  width: 100%;
+  height: 100%;
+
+  background-color: gray;
+  color: white;
+
+  font-size: 18px;
+  font-family: monospace;
+
+  border: none;
+  outline: none;
+
+  resize: none;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
