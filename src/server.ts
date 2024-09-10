@@ -26,6 +26,14 @@ io.on("connection", (socket: any) => {
     socket.broadcast.emit("move-cursor", mousePositions);
   });
 
+  socket.on("click-text-area", () => {
+    socket.broadcast.emit("click-text-area");
+  });
+
+  socket.on("update-text-area", (text: string) => {
+    socket.broadcast.emit("update-editor-text", text);
+  });
+
   socket.on("disconnect", () => {
     users--;
     io.emit("update-users", users);
